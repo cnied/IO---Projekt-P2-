@@ -34,14 +34,15 @@ CREATE TABLE POKOJ (
     Cena_Bazowa_Mnożnik REAL NOT NULL DEFAULT 1.0
 );
 
--- Encja: KLIENT
+-- Encja: KLIENT (Zmodyfikowana)
 CREATE TABLE KLIENT (
     ID_Klienta INTEGER PRIMARY KEY AUTOINCREMENT,
     Imię TEXT NOT NULL,
     Nazwisko TEXT NOT NULL,
     Telefon TEXT,
     Email TEXT UNIQUE,
-    Adres TEXT
+    Adres TEXT,
+    Lojalny INTEGER DEFAULT 0 
 );
 
 -- Encja: CENNIK
